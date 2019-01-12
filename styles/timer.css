@@ -1,0 +1,12 @@
+.page-container {
+    font-size: 20px;
+    text-align: center;
+}
+
+.page-container .lap-button {
+    margin-top: 20px;
+}
+
+.timer-container {
+    margin-top: 20px;
+}
