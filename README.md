@@ -1,0 +1,1 @@
+A simple Vue.js Project without using webpack or any bundler.
