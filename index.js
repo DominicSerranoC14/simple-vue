@@ -8,7 +8,7 @@ new Vue({
     <div class="page-container">
         <Timer v-for="(each, index) in timers" :key="index" />
 
-        <button @click="addTimer" class="lap-button">Lap</button>
+        <button @click="addTimer" class="lap-button">Add Timer</button>
     </div>
     `,
 
