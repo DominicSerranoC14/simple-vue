@@ -6,7 +6,13 @@ new Vue({
 
     template: `
     <div class="page-container">
-        <Timer v-for="(each, index) in timers" :key="index" />
+        <Timer
+            v-for="({ id }, index) in timers"
+            :key="index"
+            :removeTimer="removeTimer"
+            :timerCount="timers.length"
+            :timerId="id"
+        />
 
         <button @click="addTimer" class="lap-button">Add Timer</button>
     </div>
@@ -19,13 +25,17 @@ new Vue({
 
     data() {
         return {
-            timers: [ null ]
+            timers: [ { id: 1 } ]
         }
     },
 
     methods: {
         addTimer() {
-            this.timers.push(null);
+            this.timers.push({ id: this.timers.length + 1 });
+        },
+
+        removeTimer(id) {
+            this.timers = this.timers.filter(timer => timer.id !== id);
         }
     }
 });
